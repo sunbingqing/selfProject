@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* css reset {*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td,span,button{padding: 0;margin: 0;} 
+body,input,textarea,select,option,button{font-family: "Microsoft Yahei", Arial, Helvetica, "pingfagn sc", sans-serif;}
+table {border-collapse: collapse;border-spacing: 0;} 
+img {border: 0;}
+ol,ul,li{list-style: none;}
+a,input,textarea,button,select{outline: none;}
+button{cursor: pointer;}
+button[disabled]{cursor: default;}
+h1,h2,h3{font-weight: normal;} 
+a{text-decoration: none;}
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.clearfix{zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.fl{float: left;}
+.fr{float: right;}
+/*} css reset */
+
+/* comment style {*/
+.shape-box{width: 100%;padding: 30px 0; background-color: #fff;border-bottom: 1px solid #FF9800;}
+.tit{padding-left: 20px;margin-left: 10px; font-size: 18px;color: #333;border-left:5px solid #FF9800;}
+.shape-wrap{width: 100%; margin:50px 0;text-align: center;}
+/*} comment style */
+
+/* heart-shaped {*/
+.heart-shaped{position: relative; display: inline-block;width: 100px;height: 100px;background-color: #f77373;transform:rotate(45deg);}
+.heart-shaped:before,.heart-shaped:after{position: absolute;top: 0;left: 0; display: inline-block; content: '';width: 100px;height: 100px;border-radius: 50%;background-color: #f77373;}
+.heart-shaped:before{top: -50px;}
+.heart-shaped:after{left: -50px;}
+/*} heart-shaped */
+
+/* bubble-shaped {*/
+.bubble-shaped{position: relative;display: inline-block;width: 200px;height: 100px;background-color: #24b1a4;border-radius: 8px;}
+.bubble-shaped:after{position: absolute;top: 100px;left: 50%;display: inline-block;content: '';width: 0;height: 0;margin-left: -10px; border-width:10px;border-color: #24b1a4 transparent transparent #24b1a4;border-style: solid; }
+/*} bubble-shaped */
+
+/* bubble-shaped {*/
+.cut-shaped{display: inline-block;width: 200px;padding:60px;background:linear-gradient(135deg,transparent 15px,pink 0) top left,linear-gradient(-135deg,transparent 15px,pink 0) top right,linear-gradient(-45deg,transparent 15px,pink 0) bottom right,linear-gradient(45deg,transparent 15px,pink 0) bottom left;background-size: 50%;background-repeat: no-repeat;}
+/*} bubble-shaped */
