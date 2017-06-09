@@ -36,6 +36,10 @@ a{text-decoration: none;}
 .bubble-shaped:after{position: absolute;top: 100px;left: 50%;display: inline-block;content: '';width: 0;height: 0;margin-left: -10px; border-width:10px;border-color: #24b1a4 transparent transparent #24b1a4;border-style: solid; }
 /*} bubble-shaped */
 
-/* bubble-shaped {*/
+/* cut-shaped {*/
 .cut-shaped{display: inline-block;width: 200px;padding:60px;background:linear-gradient(135deg,transparent 15px,pink 0) top left,linear-gradient(-135deg,transparent 15px,pink 0) top right,linear-gradient(-45deg,transparent 15px,pink 0) bottom right,linear-gradient(45deg,transparent 15px,pink 0) bottom left;background-size: 50%;background-repeat: no-repeat;}
-/*} bubble-shaped */
+/*} cut-shaped */
+
+/* arc-shaped {*/
+.arc-shaped{display: inline-block;width: 200px;padding:60px;background: radial-gradient(circle at top left, transparent 15px,#9e9e9e 0) top left,radial-gradient(circle at top right, transparent 15px,#9e9e9e 0) top right,radial-gradient(circle at bottom right, transparent 15px,#9e9e9e 0) bottom right,radial-gradient(circle at bottom left, transparent 15px,#9e9e9e 0) bottom left; background-size: 50%;background-repeat: no-repeat;}
+/*} arc-shaped */
