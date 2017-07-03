@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>布局样式汇总</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <!-- 圣杯的 HTML 结构-左右两边固定，中间自适应-->
+    <div class="container clearfix">
+        <!-- 中间的 div 必须写在最前面 -->
+        <div class="middle1 fl">中间弹性区</div>
+        <div class="left1 fl">左边栏</div>
+        <div class="right1 fl">右边栏</div>
+    </div>
+
+    <div class="row">
+        <div class="fleft fl">左侧布局</div>
+		<div class="fright fr">右侧布局</div>
+        <fieldset class="content">
+       	    <span>中间布局</span>
+        </fieldset>
+    </div>
+
+    <!-- HTML 结构-左右自适应，中间固定宽度-->
+    <div class="container clearfix">
+        <div class="left2 fl"><div class="inner">左边栏</div></div>
+        <div class="middle2 fl">中间固定区</div>
+        <div class="right2 fl"><div class="inner">右边栏</div></div>
+    </div>
+
+</body>
+</html>

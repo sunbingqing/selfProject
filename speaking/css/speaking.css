@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* css reset {*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td,span,button{padding: 0;margin: 0;} 
+body,input,textarea,select,option,button{font-family: "Microsoft Yahei", Arial, Helvetica, "pingfagn sc", sans-serif;}
+table {border-collapse: collapse;border-spacing: 0;} 
+img {border: 0;}
+ol,ul,li{list-style: none;}
+a,input,textarea,button,select{outline: none;}
+button{cursor: pointer;}
+button[disabled]{cursor: default;}
+h1,h2,h3{font-weight: normal;} 
+a{text-decoration: none;}
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.clearfix{zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.fl{float: left;}
+.fr{float: right;}
+/*} css reset */
+
+.recordWrap{width: 100%;}
+.recordTips{display: table; min-width: 100px;max-width: 310px;padding:8px 16px;margin:0 auto 20px;background-color: #ebebeb; border-radius: 8px;}
+.recordInitTips{font-size: 12px;color:#3c3c3c;}
+.flashPoint{display: inline-block;width: 6px;height: 6px;margin:0 10px 0 8px;vertical-align: 2px; background-color: #ff3526;border-radius: 3px;}
+.recordTime{font-size: 14px;color: #6c6c6c;}
+
+.recordBtnWrap{text-align: center;font-size: 0;}
+/*不同状态的按钮样式*/
+.recordBtn{display: inline-block;width: 60px;height: 60px;border-radius: 50%;vertical-align: middle;cursor: pointer;}
+.init{background:#39dc91 url("../images/icon1.png") no-repeat center;}
+.inRecord{margin: 15px 0; background-color: #f15a24;box-shadow: 0 0 0 6px #fff,0 0 0 7px #f79c7c,0 0 0 13px #fff,0 0 0 14px #fcdfd4;}
+.inRecord:before{display: inline-block;content:'';width: 20px;height: 20px;margin-top: 20px; background-color: #fff;border-radius: 3px;}
+.inPlayback{background:#39dc91 url("../images/icon2.png") no-repeat center;}
+
+.btnRemake,.btnNext{min-width:97px;height: 32px;padding:0 20px;font-size: 12px;border-radius: 16px;vertical-align: middle;}
+.btnRemake{margin-right: 35px; color: #3c3c3c;background-color: #fff; border:1px solid #d7d7d7;}
+.btnRemake:hover{background-color: #f5f5f5;}
+.btnNext{margin-left: 35px;color: #fff;background-color: #39dc91;border:none;}
+.nextIcon{display: inline-block;width: 6px;height: 12px;margin-left: 10px; background: url("../images/icon3.png") no-repeat center;vertical-align: middle;}
+.btnNext:hover{background-color: #25cb7e;}
+
+.recordStatus{padding-top: 10px; font-size: 14px;color: #9c9c9c;text-align: center;}
+

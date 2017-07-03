@@ -37,9 +37,33 @@ a{text-decoration: none;}
 /*} bubble-shaped */
 
 /* cut-shaped {*/
-.cut-shaped{display: inline-block;width: 200px;padding:60px;background:linear-gradient(135deg,transparent 15px,pink 0) top left,linear-gradient(-135deg,transparent 15px,pink 0) top right,linear-gradient(-45deg,transparent 15px,pink 0) bottom right,linear-gradient(45deg,transparent 15px,pink 0) bottom left;background-size: 50%;background-repeat: no-repeat;}
+.cut-shaped{display: inline-block;width: 200px;height:120px;background:linear-gradient(135deg,transparent 15px,pink 0) top left,linear-gradient(-135deg,transparent 15px,pink 0) top right,linear-gradient(-45deg,transparent 15px,pink 0) bottom right,linear-gradient(45deg,transparent 15px,pink 0) bottom left;background-size: 50%;background-repeat: no-repeat;}
 /*} cut-shaped */
 
 /* arc-shaped {*/
-.arc-shaped{display: inline-block;width: 200px;padding:60px;background: radial-gradient(circle at top left, transparent 15px,#9e9e9e 0) top left,radial-gradient(circle at top right, transparent 15px,#9e9e9e 0) top right,radial-gradient(circle at bottom right, transparent 15px,#9e9e9e 0) bottom right,radial-gradient(circle at bottom left, transparent 15px,#9e9e9e 0) bottom left; background-size: 50%;background-repeat: no-repeat;}
+.arc-shaped{display: inline-block;width: 200px;height:120px;background: radial-gradient(circle at top left, transparent 15px,#9e9e9e 0) top left,radial-gradient(circle at top right, transparent 15px,#9e9e9e 0) top right,radial-gradient(circle at bottom right, transparent 15px,#9e9e9e 0) bottom right,radial-gradient(circle at bottom left, transparent 15px,#9e9e9e 0) bottom left; background-size: 50%;background-repeat: no-repeat;}
 /*} arc-shaped */
+
+/* ladder-shaped {*/
+.ladder-shaped{display: inline-block;width: 200px;height: 120px;background-color: #3fadd3;transform:perspective(30px) rotateX(5deg);}
+/*} ladder-shaped */
+
+/* angle-shaped {*/
+.angle-shaped{position: relative; display: inline-block; width: 200px;height: 200px;background: linear-gradient(-150deg,transparent 20px,#58a 0);}
+.angle-shaped:before{position: absolute;top: 0;right:0; display: inline-block;content: '';width: 46px;height: 20px;background: linear-gradient(); transform:translate(0px,23px) rotate(30deg);transform-origin: bottom right;}
+/*} angle-shaped */
+
+.inRecord{position:relative;display: inline-block; width: 60px;height: 60px;border-radius: 50%;margin: 15px 0; background: #f15a24;}
+.inRecord:before,.inRecord:after{position:absolute;top:-13px;left:-13px;display:inline-block;content:'';width:100%;height:100%;padding:13px; box-shadow:0 0 0 1px #f79c7c;border-radius:50%;-webkit-animation:spread 1.5s infinite;animation:spread 1.5s infinite;}
+.inRecord:after{-webkit-animation-delay:.3s;animation-delay:.3s;}
+/* 录音圆环扩散动画 */
+@-webkit-keyframes spread{
+    from {opacity:1;transform:scale(0.7,0.7);}
+    to {opacity:0;transform:scale(1,1);}
+}
+@keyframes spread{
+    from {opacity:1;transform:scale(0.7,0.7);}
+    to {opacity:0;transform:scale(1,1);}
+}
+
+
