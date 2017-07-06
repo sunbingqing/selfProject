@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas之七巧板</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <canvas id="canvas" style="display:block; border:1px solid #000; margin:50px auto;">Your browser does not support html5 canvas!</canvas>
+
+    <script>
+        var width = 400,height = 400; //自定义画布大小
+        var tangram = [
+            {p:[{x:0,y:0},{x:width,y:0},{x:width/2,y:height/2}],color:"#096220"},
+            {p:[{x:0,y:0},{x:width/2,y:height/2},{x:0,y:height}],color:"#eb3f11"},
+            {p:[{x:width,y:0},{x:width,y:height/2},{x:width/4*3,y:height/4}],color:"#740b05"},
+            {p:[{x:width/4*3,y:height/4},{x:width,y:height/2},{x:width/4*3,y:height/4*3},{x:width/2,y:height/2}],color:"#c3a900"},
+            {p:[{x:width/2,y:height/2},{x:width/4*3,y:height/4*3},{x:width/4,y:height/4*3}],color:"#210c44"},
+            {p:[{x:width/4,y:height/4*3},{x:width/4*3,y:height/4*3},{x:width/2,y:height},{x:0,y:height}],color:"#2b357d"},
+            {p:[{x:width,y:height/2},{x:width,y:height},{x:width/2,y:height}],color:"#da1e03"}
+        ] //数组存放每个多边形的顶点和颜色
+        window.onload = function(){
+            var canvas = document.getElementById("canvas");
+            canvas.width = width;
+            canvas.height = height;
+            var context = canvas.getContext("2d");
+            for(var i = 0; i < tangram.length; i++){
+                draw(tangram[i],context)
+            } // 这是一个回调函数？
+        }
+        function draw(piece,ctx){
+            ctx.beginPath();
+            ctx.moveTo(piece.p[0].x,piece.p[0].y);
+            for(var i = 1; i < piece.p.length; i++){
+                ctx.lineTo(piece.p[i].x,piece.p[i].y);
+            }
+            ctx.closePath();
+            ctx.fillStyle = piece.color;
+            ctx.fill();
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth =3;
+            ctx.stroke();
+        } // 画每一个多边形
+    </script>
+</body>
+</html>

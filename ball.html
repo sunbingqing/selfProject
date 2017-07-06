@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下落的小球</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <canvas id="canvas" style="display:block;margin:50px auto;border:1px solid #ccc;">Your browser does not support html5 canvas!</canvas>
+    <script>
+        var ball = {x:700,y:20,r:10,g:2,vx:-4,vy:2,color:"orange"}
+        window.onload = function(){
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            canvas.width=800;
+            canvas.height=500;
+
+            setInterval(
+                function(){
+                    render(context);
+                    update();
+                },50
+            );
+        };
+        function update(){
+            ball.x += ball.vx;
+            ball.y += ball.vy;
+            ball.vy += ball.g;
+
+            if(ball.y >= canvas.height - ball.r){ //判断小球下落的高度和页面高度是否相等，小球的位置以圆心为圆点计算
+                ball.y = canvas.height - ball.r; //小球下落第一秒的位置
+                ball.vy = -ball.vy*0.5; //小球下落后速度相反方向增加，并加上摩擦力
+            }
+        }
+        function render(cxt){
+            cxt.clearRect(0,0,canvas.width,canvas.height);
+
+            cxt.fillStyle=ball.color;
+            cxt.beginPath();
+            cxt.arc(ball.x,ball.y,ball.r,0,2*Math.PI);
+            cxt.closePath();
+            cxt.fill();
+        }
+    </script>
+</body>
+</html>

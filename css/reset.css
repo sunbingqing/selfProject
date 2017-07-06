@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* css reset {*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td,span,button{padding: 0;margin: 0;} 
+body,input,textarea,select,option,button{font-family: "Microsoft Yahei", Arial, Helvetica, "pingfagn sc", sans-serif;}
+table {border-collapse: collapse;border-spacing: 0;} 
+img {border: 0;}
+ol,ul,li{list-style: none;}
+a,input,textarea,button,select{outline: none;}
+button{cursor: pointer;}
+button[disabled]{cursor: default;}
+h1,h2,h3{font-weight: normal;} 
+a{text-decoration: none;}
+*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.clearfix{zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.fl{float: left;}
+.fr{float: right;}
+html,body{width: 100%;height: 100%;}
+/*} css reset */
