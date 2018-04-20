@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>scrollbar</title>
+</head>
+<style>
+	.dropdown-menu{padding:0;margin:150px auto; width: 150px;max-height: 150px;border:1px solid #ccc;border-radius: 3px;overflow-y:auto;}
+	.dropdown-menu li{height: 30px;padding-left: 10px; line-height: 30px;list-style-type: none;overflow-x:hidden;white-space: nowrap;text-overflow:ellipsis;}
+	.scroll-style::-webkit-scrollbar{width: 10px;background-color: #ccc;}
+	.scroll-style::-webkit-scrollbar-thumb{border-radius: 3px;background-color:rgba(0,0,0,0.3);}
+	.scroll-style::-webkit-scrollbar-thumb:hover,.scroll-style::-webkit-scrollbar-thumb:active{background-color:rgba(0,0,0,0.7);}
+	.scroll-style::-webkit-scrollbar-button{width: 0;height: 0;display: none;}
+</style>
+<body>
+    <ul class="dropdown-menu scroll-style">
+        <li>Action</li>
+        <li>Another action</li>
+        <li>Something else here</li>
+        <li>Something</li>
+        <li>Separated link</li>
+        <li>Something</li>
+        <li>Separated link</li>
+    </ul>
+</body>
+
+</html>

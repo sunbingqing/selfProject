@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/report-animation.css">
+    <script src="js\ScreenAdaptation.js"></script>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="sectionBox">
+            <!--达标-->
+            <div class="successBox">
+                <div class="successPopBg"></div>
+                <div class="popScore">
+                    <div class="successGrade">C</div>
+                    <div class="successRateWrap">
+                        <span class="successRateText">正确率：<span class="successRate">80.5%</span></span>
+                    </div>
+                </div>
+                <div class="successPic"></div>
+            </div>
+            <!--不达标-->
+            <!--<div class="failureBox">
+                <div class="popScore">
+                    <div class="failureGrade">C</div>
+                    <div class="failureRateWrap">
+                        <span class="failureRateText">正确率：<span class="failureRate">80.5%</span></span>
+                    </div>
+                </div>
+                <div class="failurePic"></div>
+            </div>-->
+
+            <div class="referenceWrap">
+                <h2 class="sectionTitWrap levelTit">——<span class="sectionTit levelTit">考核能力</span>——</h2>
+                <div class="standardInfo">
+                    <span class="noStandardWrap"><span class="standardText">不达标</span></span>
+                    <span class="standardWrap"><span class="standardText">达标</span></span>
+                </div>
+                <div class="standardList">
+                    <span class="standardItem">D</span>
+                    <span class="standardItem">C</span>
+                    <span class="standardItem">B</span>
+                    <span class="standardItem">A</span>
+                </div>
+            </div>
+        </div>
+
+        <!--正确率情况-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">正确率情况</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <div>
+                    <!--这里放图标-->
+                </div>
+                <div class="lengendBox">
+                    <span class="lengendItem"><em class="lengendPoint colorOrange2"></em>个人准确率</span>
+                    <span class="lengendItem"><em class="lengendPoint colorGreen"></em>全国准确率</span>
+                </div>
+            </div>
+        </div>
+
+        <!--平均分对比-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">平均分对比</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <h3 class="analysisDetailTit">个人准确率</h3>
+                <div class="analysisRateWrap">
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">听力</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">词汇</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">语法</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">阅读</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">写作</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">综合</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--知识点掌握分析-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">知识点掌握分析</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <div>
+                    <!--这里放图标-->
+                </div>
+                <div class="lengendBox">
+                    <span class="lengendItem"><em class="lengendPoint colorOrange"></em>个人准确率</span>
+                    <span class="lengendItem"><em class="lengendPoint colorBlue"></em>中心准确率</span>
+                    <span class="lengendItem"><em class="lengendPoint colorGreen"></em>全国准确率</span>
+                </div>
+            </div>
+        </div>
+
+        <!--词法掌握情况-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">词法掌握情况</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <h3 class="analysisDetailTit">个人准确率</h3>
+                <div class="analysisRateWrap">
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 1</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 2</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 3</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 4</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 5</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--句法掌握情况-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">句法掌握情况</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <h3 class="analysisDetailTit">个人准确率</h3>
+                <div class="analysisRateWrap">
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 1</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 2</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 3</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 4</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 5</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--时态掌握情况-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">时态掌握情况</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <h3 class="analysisDetailTit">个人准确率</h3>
+                <div class="analysisRateWrap">
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 1</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 2</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 3</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 4</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                    <div class="analysisRate">
+                        <div class="analysisRateText">
+                            <span class="analysisRateNum">60%</span>
+                            <span class="analysisRateTip">知识点 5</span>
+                        </div>
+                        <div class="analysisProgress">
+                            <span class="analysisProgressItem" style="width:60%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--知识点掌握情况分析-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">知识点掌握情况分析</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail2">
+                <p class="knowledgePointInfo">您在词语的用法方面掌握较好；<br>您能够较好运用不同句式；<br>您的时态运用需要提高；<br>对以下知识点的掌握存在不足，建议在下一阶段的学习中注意提高：</p>
+                <div class="knowledgePointWrap">
+                    <span class="knowledgePoint">知识点001</span>
+                    <span class="knowledgePoint">知识点001</span>
+                    <span class="knowledgePoint">知识点001</span>
+                    <span class="knowledgePoint">知识点001</span>
+                </div>
+            </div>
+        </div>
+
+        <!--错误汇总-->
+        <div class="sectionBox2">
+            <div class="analysisTip clearfix">
+                <span class="analysisTit">错误汇总</span>
+                <em class="analysisArrow"></em>
+                <!-- 展开时图片翻转180度： style="transform: rotate(180deg);"-->
+            </div>
+            <div class="analysisDetail">
+                <!--选择题-->
+                <div class="questionWrap">
+                    <h4 class="questionTitle">1. 选择题1<span class="questionTitleNote">（看题目，把相应的内容连接在一起）</span></h4>
+                    <p class="questionStem">He always buys clothes from thrift shops, I get mine from designer boutiques. </p>
+                    <div class="questionOption">
+                        <div class="questionChoice"><em class="choicePoint"></em><span class="choiceText">whereas I get mine from designer boutiques I get mine from designer boutiques</span></div>
+                        <div class="questionChoice"><em class="choicePoint"></em><span class="choiceText">whereas</span></div>
+                        <div class="questionChoice"><em class="choicePoint"></em><span class="choiceText">whereas</span></div>
+                    </div>
+                </div>
+                <div class="questionWrap">
+                    <h4 class="questionTitle">2. 选择题2<span class="questionTitleNote">（看题目，把相应的内容连接在一起）</span></h4>
+                    <p class="questionStem">He always buys clothes from thrift shops, I get mine from designer boutiques. </p>
+                    <div class="questionOption">
+                        <div class="questionChoice"><em class="choicePoint"></em><img src="" alt="" class="choiceImg"></div>
+                        <div class="questionChoice"><em class="choicePoint"></em><img src="" alt="" class="choiceImg"></div>
+                        <div class="questionChoice"><em class="choicePoint"></em><img src="" alt="" class="choiceImg"></div>
+                    </div>
+                </div>
+                <!--判断题-->
+                <div class="questionWrap">
+                    <h4 class="questionTitle">3. 判断题<span class="questionTitleNote">（看题目，把相应的内容连接在一起）</span></h4>
+                    <p class="questionStem">He always buys clothes from thrift shops, I get mine from designer boutiques. </p>
+                    <div class="questionOption">
+                        <span class="questionChoice2"><em class="choicePoint"></em><span class="choiceText">true</span></span>
+                        <span class="questionChoice2"><em class="choicePoint"></em><span class="choiceText">false</span></span>
+                    </div>
+                </div>
+                <!--连线题-->
+                <div class="questionWrap">
+                    <h4 class="questionTitle">4. 连线题<span class="questionTitleNote">（看题目，把相应的内容连接在一起）</span></h4>
+                    <p class="questionStem">He always buys clothes from thrift shops, I get mine from designer boutiques. </p>
+                    <div class="videoWrap">
+                        <!--这里放视频-->
+                    </div>
+                    <div class="questionOption">
+                        <span class="longOptionItem">The Amazing Hubble The Amazing Hubble The Amazing </span>
+                        <span class="longOptionItem">The Amazing Hubble The Amazing Hubble </span>
+                        <span class="longOptionItem">The Amazing Hubble The  </span>
+                        <span class="longOptionItem">The Amazing Hubble </span>
+                        <span class="longOptionItem">The Amazing</span>
+                        <span class="waitingWrap"><span class="waitingText">待选区</span></span>
+                        <span class="longOptionItem waiting">The Amazing Hubble The Amazing Hubble The Amazing </span>
+                        <span class="longOptionItem waiting">The Amazing Hubble The Amazing Hubble </span>
+                        <span class="longOptionItem waiting">The Amazing Hubble The  </span>
+                        <span class="longOptionItem waiting">The Amazing Hubble </span>
+                        <span class="longOptionItem waiting">The Amazing</span>
+                    </div>
+                </div>
+                <!--点选题-->
+                <div class="questionWrap">
+                    <h4 class="questionTitle">5. 点选题<span class="questionTitleNote">（看题目，把相应的内容连接在一起）</span></h4>
+                    <p class="questionStem2">Kidney stones are very hard mineral deposits that happen to form in the kidney. They start off like a
+                        small <span class="completionLine">21 </span>particle and after a period of time develop into stones.
+                        These are formed when urine is highly <span class="completionLine">22 </span>. Due to this level
+                        of concentration the minerals and other floating particles in urine form into crystals which over
+                        a period of time turn into hard mass and later into a stone. Finding out kidney stones is not that
+                        easy as there may not be any sign or <span class="completionLine">23 </span>to detect it. These stones
+                        cause lot of <span class="completionLine">24</span> when it happens to break and move towards the
+                        bladder. The stones tend to pass out from the body which causes pain. If the stone happens to be
+                        big it may block the flow of urine causing pressure. This <span class="completionLine">25 </span>                        causes stretches and spasms which pains a lot. </p>
+                    <div class="questionOption">
+                        <span class="smallOptionItem">The Amazing</span>
+                        <span class="smallOptionItem">The Amazing</span>
+                        <span class="smallOptionItem">The Amazing</span>
+                        <span class="smallOptionItem">zing</span>
+                        <span class="smallOptionItem">Amazing</span>
+                    </div>
+                </div>
+                <!--写作题-->
+                <div class="questionWrap">
+                    <h4 class="questionTitle">6. 写作题<span class="questionTitleNote">（看题目，把相应的内容连接在一起）</span></h4>
+                    <p class="questionStem2">Many people experience neck and back injuries on a frequent basis. Either from work related injuries
+                        or from just moving the wrong way. Your neck and back are easy to injure. There are many pills that
+                        you will be prescribed to relieve the pain. But these pills do not fix the problem, they only dull
+                        the pain for a small period of time. More frequently, </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
