@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* css reset 这段是重置样式，可不需要增加 {*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,textarea,p,th,td,span,button{padding: 0;margin: 0;}
+        body,input,textarea,select,option,button{font-family: "Microsoft Yahei", Arial, Helvetica, "pingfagn sc", sans-serif;}
+        table {border-collapse: collapse;border-spacing: 0;}
+        img {border: 0;}
+        ol,ul,li{list-style: none;}
+        a,input,textarea,button,select{outline: none;}
+        button{cursor: pointer;}
+        button[disabled]{cursor: default;}
+        h1,h2,h3{font-weight: normal;}
+        a{text-decoration: none;}
+        *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+        .clearfix{zoom: 1;}
+        .clearfix:after{content: "";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+        .fl{float: left;}
+        .fr{float: right;}
+        html,body{width: 100%;height: 100%;}
+        /*} css reset */
+
+        /* 表格样式 开始{ */
+       .content{width: 668px;max-height: 352px;padding-left: 116px;border:1px solid #ddd;}
+       .leftBox{float: left; width: 116px;margin-left: -116px;border-right: 1px solid #ddd;}
+       .leftHead{position: relative;width: 100%;height: 41px;background-color: #f5f5f5; border-bottom: 1px solid #ddd;}
+       .textClass,.textTime{position: absolute;font-size: 12px;color: #333;}
+       .textClass{left: 14px;bottom: 5px;}
+       .textTime{right: 14px;top: 5px;}
+       svg{position: absolute;top: 0;left: 0;}
+       svg line{stroke:#ddd;stroke-width: 1;}
+       .leftCon{width:100%;height: 312px;padding-bottom: 18px;overflow: hidden;}
+       .leftConTable{width:100%;}
+       .leftConTable td{width: 100%;height: 38px;padding: 0 8px; font-size: 0; border-top: 1px solid #ddd;}
+       .leftConTable .firstTr td,.rightConTable .firstTr td{border-top: none;}
+       .namePic{display: inline-block;width:16px;height: 16px;background: url("./placeIcon.png") no-repeat center;}
+       .staffIcon{background-image: url("./staffIcon.png")}
+       .studentIcon{background-image: url("./studentIcon.png")}
+       .nameText{display: inline-block;max-width: 83px; padding-left: 5px; font-size: 12px;color: #333;overflow: hidden;white-space:nowrap;text-overflow: ellipsis;}
+       
+       .rightBox{width: 100%;}
+       .rightHead{width:100%;overflow: hidden;}
+       .rightHeadTable{width: 100%;}
+       .rightHeadTable td{min-width:45px;height: 40px;text-align: center;background-color: #f5f5f5; border-left: 1px solid #ddd;border-bottom: 1px solid #ddd;}
+       .rightHeadTable td.firstTd{border-left: none;}
+       .rightHeadTable td.lastTd{min-width: 63px; padding-right: 18px;}
+       .timeList{font-size: 12px;color: #333;}
+       .rightCon{width: 100%;height: 312px; overflow: auto;}
+       .rightConTable{width: 100%;}
+       .rightConTable td{min-width: 45px;height: 38px;border-left: 1px solid #ddd;border-top: 1px solid #ddd;}
+       .rightConTable td.firstTd{position: relative; border-left: none;}
+       .takeUpBox{position: absolute;top: 0;display: inline-block;height: 100%;font-size: 0;}
+       .firstOne{left: 24px;width: 100px;}
+       .firstTwo{left: 300px;width: 100px;}
+       .secondOne{left: 50px;width: 150px;}
+       .thirdOne{left: 80px;width: 200px;}
+       .whole,.half,.third{display: inline-block;width: 100%;}
+       .whole{height: 100%;}
+       .half{height: 50%;}
+       .third{height: 33.333%;}
+       .calendar{background-color: rgba(124,179,66,.4);}
+       .activity{background-color: rgba(85,137,255,.4);}
+       .schedule{background-color: rgba(255,138,115,.4);}
+        /* } 表格样式 结束 */
+    </style>
+    <script>
+    function scroll(){
+        var top=document.getElementById("rightCon").scrollTop;
+        var left=document.getElementById("rightCon").scrollLeft;
+        document.getElementById("leftCon").scrollTop=top;
+        document.getElementById("rightHead").scrollLeft=left;
+    }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="leftBox">
+            <div class="leftHead">
+                <span  class="textClass">名称</span>
+                <span  class="textTime">时间</span>
+                <svg width="100%" height="100%">
+                <line x1="0" y1="0" x2="116" y2="40"></line>
+                <!--此处斜线与这个格子宽高联系紧密，如果格子宽高改变，x2和y2的值也要相应改变-->
+                </svg>
+            </div>
+            <div class="leftCon" id="leftCon">
+                <table class="leftConTable">
+                    <tr  class="firstTr">
+                        <td>
+                            <em class="namePic staffIcon"></em>
+                            <!-- 员工图标-类staffIcon、学生图标-类studentIcon、场地(图标包含在类namePic里，不需要另外追加) -->
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic studentIcon"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <em class="namePic"></em>
+                            <span class="nameText">Merry Lee</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="rightBox">
+            <div class="rightHead" id="rightHead">
+                <table class="rightHeadTable">
+                    <tr>
+                        <td class="firstTd"><span class="timeList">8:00</span></td>
+                        <td><span class="timeList">9:00</span></td>
+                        <td><span class="timeList">10:00</span></td>
+                        <td><span class="timeList">11:00</span></td>
+                        <td><span class="timeList">12:00</span></td>
+                        <td><span class="timeList">13:00</span></td>
+                        <td><span class="timeList">14:00</span></td>
+                        <td><span class="timeList">15:00</span></td>
+                        <td><span class="timeList">16:00</span></td>
+                        <td><span class="timeList">17:00</span></td>
+                        <td><span class="timeList">18:00</span></td>
+                        <td><span class="timeList">19:00</span></td>
+                        <td><span class="timeList">20:00</span></td>
+                        <td><span class="timeList">21:00</span></td>
+                        <td class="lastTd"><span class="timeList">22:00</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="rightCon" id="rightCon" onscroll="scroll()">
+                <table class="rightConTable">
+                    <tr class="firstTr">
+                        <td class="firstTd">
+                            <!--<span class="takeUpBox firstOne">
+                                <span class="whole schedule"></span>
+                            </span>-->
+                            <!-- 类takeUpBox后面的类firstOne、firstTwo等需要前端定义，left值表示距第一个td的距离，width值表示占用时间的长度；
+                            类whole表示同一时段只有一个日程，类half表示同一时段有两个日程（两个日程需要写两个span），类third表示同一时段有三个日程（三个span）；
+                            类calendar、activity、schedule分别表示校历、活动、日程的颜色 -->
+                            <!--<span class="takeUpBox firstTwo">
+                                <span class="whole schedule"></span>
+                            </span>-->
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                            <!--<span class="takeUpBox secondOne">
+                                <span class="third schedule"></span>
+                                <span class="third calendar"></span>
+                                <span class="third activity"></span>
+                            </span>-->
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                            <!--<span class="takeUpBox thirdOne">
+                                <span class="half schedule"></span>
+                                <span class="half activity"></span>
+                            </span>-->
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                           
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                            
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                            
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                           
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                            
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="firstTd">
+                            
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

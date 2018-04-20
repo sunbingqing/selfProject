@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>波浪下划线</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        span {
+            position: relative;
+            font-size: 20px;
+            color: #3c3c3c;
+            padding-bottom: 5px;
+        }
+        
+        span:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(135deg, transparent, transparent 45%, pink, transparent 55%, transparent 100%), linear-gradient(45deg, transparent, transparent 45%, pink, transparent 55%, transparent 100%);
+            background-size: 20px 20px;
+        }
+        
+        div {
+            display: none;
+            width: 100px;
+            height: 50px;
+            background: linear-gradient(45deg, transparent 0%, transparent 45%, pink 45%, pink 55%, transparent 55%, transparent 100%), linear-gradient(135deg, transparent 0%, transparent 45%, pink 45%, pink 55%, transparent 55%, transparent 100%);
+            background-size: 100px 100px;
+            border: 1px solid #ccc;
+        }
+    </style>
+
+</head>
+
+<body style="padding:200px;">
+    <span>桃李不言下自成蹊</span>
+    <div></div>
+</body>
+
+</html>

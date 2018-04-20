@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>树形下拉</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {
+            width: 200px;
+            height: 300px;
+            margin: 100px;
+            overflow: auto;
+            border: 1px solid #ccc;
+        }
+        
+        .ul1 {
+            padding-left: 5px;
+            line-height: 30px;
+        }
+        
+        .ul2 {
+            padding-left: 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .2s ease-in-out;
+        }
+        
+        li:hover .ul2 {
+            max-height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul class="ul1">
+            <li>
+                <div class="tit1">第一排</div>
+                <ul class="ul2">
+                    <li>111</li>
+                    <li>222</li>
+                    <li>111</li>
+                    <li>222</li>
+                    <li>111</li>
+                    <li>222</li>
+                    <li>111</li>
+                    <li>222</li>
+                </ul>
+            </li>
+            <li>
+                <div class="tit1">第2排</div>
+                <ul class="ul2">
+                    <li>dddd</li>
+                    <li>ddd</li>
+                </ul>
+            </li>
+            <li>
+                <div class="tit1">第3排</div>
+                <ul class="ul2">
+                    <li>fggggg</li>
+                    <li>22gggg</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
